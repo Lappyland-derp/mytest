@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 function Footer() {
 return (
     <div>
-    <footer style={{ backgroundColor: "#343a40", color: "white", width: "100%", marginTop: "15vh" }}>
+    <footer style={{ backgroundColor: "#343a40", color: "white", width: "100%", marginTop: "80vh" }}>
         <Container>
             <Row>
             <div className='Terms'>
@@ -35,7 +35,7 @@ return (
                     <Link to="https://www.facebook.com/" target="_blank" style={{paddingLeft: "3vh"}}>
                     <i class="fa-brands fa-facebook-f fa-lg"></i>
                     </Link>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
                     <Link to="https://twitter.com/" target="_blank" style={{paddingLeft: "3vh"}}>
                     <i class="fa-brands fa-twitter fa-lg"></i>
                     </Link>

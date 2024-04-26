@@ -49,6 +49,7 @@ function LoginScreen() {
             placeholder='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            style={{marginTop: "10px"}}
             >
 
             </Form.Group>
