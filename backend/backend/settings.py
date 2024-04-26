@@ -19,7 +19,7 @@ import os
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [BASE_DIR / "static_my_project",]
+STATICFILES_DIRS = [BASE_DIR / "static" /"static_my_project",]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static cdn", "static root")
 
