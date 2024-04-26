@@ -1,6 +1,7 @@
 from django.db import models
 import os
 import random
+from django.contrib.auth.models import User
 
 class Product(models.Model):
     #user = models.ForeignKey(User, on_delete=models.SET_NUll, null=True)
@@ -44,7 +45,7 @@ class OrderItem(models.Model):
         return str(self.name)
 
 class ShippingAddress(models.Model):
-    order = models.OneToOneField(Order, on_delete=models.CASCADE, null=True, blank=True)
+    #order = models.OneToOneField(Order, on_delete=models.CASCADE, null=True, blank=True)
     address = models.CharField(max_length=200, null=True, blank=True)
     city = models.CharField(max_length=200, null=True, blank=True)
     postalCode = models.CharField(max_length=200, null=True, blank=True)
