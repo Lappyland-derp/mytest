@@ -2,36 +2,36 @@ import React, {useEffect, useState} from 'react'
 import { Card,Image, Col, Row, Container,ListGroup, Button } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
-function CreatorScreen() {
+function ProductScreen() {
     const {id} = useParams()
-    const [creator, setCreator] = useState([])
+    const [product, setProduct] = useState([])
 
     useEffect(() => {
-        async function fetchCreators() {
-            const {data} = await axios.get(`/api/creators/${id}`)
-            setCreator(data)
+        async function fetchProducts() {
+            const {data} = await axios.get(`/api/products/${id}`)
+            setProduct(data)
         }
-        fetchCreators()
+        fetchProducts()
     })
   return (
     <Container>
     <Row >
         <Col md={6}>
-            <Image src={creator.image} alt={creator.name} fluid/>
+            <Image src={product.image} alt={product.name} fluid/>
         </Col>
 
         <Col md={3}>
             <ListGroup variant='flush'>
                 <ListGroup.Item>
-                    <h3>{creator.name}</h3>
+                    <h3>{product.name}</h3>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                    {creator.description}
+                    {product.description}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                    {creator.rating} stars
+                    {product.rating} stars
                     <Container></Container>
-                    {creator.numReviews}
+                    {product.numReviews}
                 </ListGroup.Item>
             </ListGroup>
         </Col>
@@ -42,7 +42,7 @@ function CreatorScreen() {
                     <ListGroup.Item>
                         <Row>
                             <Col>Price:</Col>
-                            <Col>${creator.price}</Col>
+                            <Col>${product.price}</Col>
                         </Row>
                     </ListGroup.Item>
                     
@@ -57,4 +57,4 @@ function CreatorScreen() {
   )
 }
 
-export default CreatorScreen
+export default ProductScreen

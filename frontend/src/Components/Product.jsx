@@ -2,28 +2,28 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-function Creator({creator}) {
+function Product({ product}) {
 return (
     <Card className='my-3 p-3 rounded'>
-        <Link to={`/creator/${creator._id}`}>
-            <Card.Img src={creator.image} />
+        <Link to={`/product/${product._id}`}>
+            <Card.Img src={product.image} />
         </Link>
 
         <Card.Body>
-            <Link to={`/creator/${creator._id}`}>
+            <Link to={`/product/${product._id}`}>
                 <Card.Title as='div'>
-                    <strong>{creator.name}</strong>
+                    <strong>{product.name}</strong>
                 </Card.Title>
             </Link>
 
             <Card.Text as='div'>
                 <div className='my-3'>
-                    {creator.rating} stars from {creator.numReviews} reviews
+                    {product.rating} stars from {product.numReviews} reviews
                 </div>
             </Card.Text>
 
             <Card.Text as='h3'>
-                ${creator.price}
+                ${product.price}
             </Card.Text>
         </Card.Body>
     </Card>
@@ -31,4 +31,4 @@ return (
 )    
 }   
 
-export default Creator
+export default Product
