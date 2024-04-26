@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from 'react'
-import products from '../products'
+import creators from '../creators'
 import {Row,Col} from 'react-bootstrap'
-import Product from '../Components/Product'
+import Creator from '../Components/Creator'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import {listProducts} from '../Actions/productActions'
+import {listCreators} from '../Actions/creatorActions'
 import Loader from '../Components/Loader'
 import Message from '../Components/Message'
 
 function HomeScreen() {
     const dispatch = useDispatch()
-    const productList = useSelector(state => state.productList)
-    const {error, loading,products} = productList
+    const creatorList = useSelector(state => state.creatorList)
+    const {error, loading,creators} = creatorList
     
     
     useEffect(() =>{
-        dispatch(listProducts())
+        dispatch(listCreators())
     }, [])
 
   return (
@@ -28,9 +28,9 @@ function HomeScreen() {
         ) : (
     
         <Row>
-            {products.map((product) => (
-                <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-                    <Product product={product}/>
+            {creators.map((creator) => (
+                <Col key={creator._id} sm={12} md={6} lg={4} xl={3}>
+                    <Creator creator={creator}/>
                 </Col>
             ))}
         </Row>
