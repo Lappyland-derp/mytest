@@ -1,12 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit'
 import {thunk} from 'redux-thunk'
-import { creatorListReducer } from './Reducers/productsReducers'
+import {productListReducer} from './Reducers/productsReducers'
 import { userLoginReducer } from './Reducers/userReducers'
 import { combineReducers } from '@reduxjs/toolkit'
 import {logger} from 'redux-logger'
 
 const reducer = combineReducers({
-    creatorList: creatorListReducer,
+    productList: productListReducer,
     userLogin: userLoginReducer
 })
 const userInfoFromStorage = localStorage.getItem('userInfo ') ?

@@ -4,7 +4,7 @@ import {Row,Col} from 'react-bootstrap'
 import Product from '../Components/Product'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import {listproducts} from '../Actions/productActions'
+import {listProducts} from '../Actions/productActions'
 import Loader from '../Components/Loader'
 import Message from '../Components/Message'
 

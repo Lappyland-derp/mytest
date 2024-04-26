@@ -13,7 +13,7 @@ function ProductScreen() {
         }
         fetchProducts()
     })
-  return (
+    return (
     <Container>
     <Row >
         <Col md={6}>
